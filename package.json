@@ -5,7 +5,7 @@
   "main": "web.js",
   "repository": {
     "type": "git",
-    "url": "git@github.com:joannkimmm/photo-project.git"
+    "url": "https://github.com/joannkimmm/photo-project"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
