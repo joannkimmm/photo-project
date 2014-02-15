@@ -8,14 +8,15 @@ if (urlHash){
     data: {'access_token': access_token},
     dataType: 'jsonp'
   }).done(function(response){
+      console.log(response);
       $('#ig_login').hide();
       swagStr = '';
       for (i in response.data){
 	swagStr += "<a href='";
-	swagStr += response.data[i].images.standard_resolution;
+	swagStr += response.data[i].images.standard_resolution.url;
 	swagStr += "'>";
 	swagStr += "<img src='";
-	swagStr += response.data[i].images.thumbnail;
+	swagStr += response.data[i].images.thumbnail.url;
 	swagStr += "'></a>";
       }
       $('#feed').append(swagStr);
