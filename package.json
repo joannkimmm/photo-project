@@ -3,9 +3,30 @@
   "version": "0.0.0",
   "description": "Application for viewing instagram photos.",
   "main": "web.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:joannkimmm/photo-project.git"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+    "private": true,
+  "scripts": {
+    "start": "node web.js"
+  },
   "author": "Joann Kim",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "logfmt": "~0.21.0",
+    "express": "~3.4.8"
+  }
+  "dependencies": {
+    "express": "3.x",
+    "logfmt": "0.x",
+   /* "express3-handlebars": "*",*/
+  },
+  "engines": {
+    "node": "0.10.x"
+  } 
+
 }
