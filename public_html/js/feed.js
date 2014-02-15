@@ -3,7 +3,13 @@ if (urlHash){
   var delimiter = '#access_token=';
   var access_token = urlHash.substring(urlHash.indexOf(delimiter)+delimiter.length);
   var feedEl = $('#feed');
-  $.getJSON("https://api.instagram.com/v1/users/self/feed" + '&access_token=' + access_token, function(){
+  $.get({
+    url: "https://api.instagram.com/v1/users/self/feed",
+    data: {'access_token': access_token},
+    dataType: 'jsonp',
+  })
+  .done(
+    function(){
       console.log(response);
       $('#ig_login').hide();
     });
