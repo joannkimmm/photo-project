@@ -7,7 +7,7 @@ if (urlHash){
     url: "https://api.instagram.com/v1/users/self/feed",
     data: {'access_token': access_token},
     dataType: 'jsonp'
-  }).done(function(){
+  }).done(function(response){
       console.log(response);
       $('#ig_login').hide();
     });
