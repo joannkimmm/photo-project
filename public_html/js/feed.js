@@ -13,7 +13,7 @@ if (urlHash){
       infoStr = '';
     	infoStr += "<p>"
     	infoStr += response.data.full_name;
-      infoStr += "<br>"
+      infoStr += "<br>@"
     	infoStr += response.data.username;
       infoStr += "<br>"
     	infoStr += response.data.bio;
@@ -37,6 +37,9 @@ if (urlHash){
       	imageStr += "'></a>";
         imageStr += "<a href='";
         imageStr += response.data[i].videos.standard_resolution.url;
+        imageStr += "'>"
+        imageStr += "<img src='";
+        imageStr += response.data[i].images.thumbnail.url;
         imageStr += "'></a>";
 
       }
