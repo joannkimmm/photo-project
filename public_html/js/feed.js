@@ -35,6 +35,10 @@ if (urlHash){
       	imageStr += "<img src='";
       	imageStr += response.data[i].images.thumbnail.url;
       	imageStr += "'></a>";
+        imageStr += "<a href='";
+        imageStr += respons.data[i].videos.standard_resolution.url;
+        imageStr += "'>";
+
       }
       $('#feed').append(imageStr);
     });
