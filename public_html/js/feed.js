@@ -18,7 +18,7 @@ if (urlHash){
       infoStr += "<br>"
     	infoStr += response.data.bio;
     	infoStr += "</p>"
-    $('#feed').append(infoStr);
+    $('#info').append(infoStr);
   });
   $.ajax({
     url: "https://api.instagram.com/v1/users/self/media/recent",
