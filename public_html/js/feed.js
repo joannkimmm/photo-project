@@ -4,7 +4,11 @@ if (urlHash){
   var access_token = urlHash.substring(urlHash.indexOf(delimiter)+delimiter.length);
   var feedEl = $('#feed');
   $.ajax({
-    url: "https://api.instagram.com/v1/users/self/username",
+    url: "hhttps://api.instagram.com/v1/users/self/",
+    data: {'access_token': access_token},
+    dataType: 'jsonp'
+  })
+  $.ajax({
     url: "https://api.instagram.com/v1/users/self/media/recent",
     data: {'access_token': access_token},
     dataType: 'jsonp'
