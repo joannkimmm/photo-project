@@ -37,7 +37,7 @@ if (urlHash){
       	imageStr += "'></a>";
         imageStr += "<a href='";
         imageStr += respons.data[i].videos.standard_resolution.url;
-        imageStr += "'>";
+        imageStr += "'></a>";
 
       }
       $('#feed').append(imageStr);
