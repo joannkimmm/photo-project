@@ -4,7 +4,7 @@ if (urlHash){
   var access_token = urlHash.substring(urlHash.indexOf(delimiter)+delimiter.length);
   var feedEl = $('#feed');
   $.ajax({
-    url: "hhttps://api.instagram.com/v1/users/self/",
+    url: "https://api.instagram.com/v1/users/self/",
     data: {'access_token': access_token},
     dataType: 'jsonp'
   }).done(function(response){
@@ -12,9 +12,11 @@ if (urlHash){
       $('#ig_login').hide();
       swagStr1 = '';
       for (i in response.data){
-  swagStr1 += response.data[i].full_name;
-  swagStr1 += response.data[i].username;
-  swagStr1 += response.data[i].bio;
+	swagStr1 += "<p>"
+	swagStr1 += response.data[i].full_name;
+	swagStr1 += response.data[i].username;
+	swagStr1 += response.data[i].bio;
+	swagStr1 += "</p>"
   }
       $('#feed').append(swagStr1);
     });
