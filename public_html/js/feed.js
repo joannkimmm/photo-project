@@ -11,11 +11,11 @@ if (urlHash){
       console.log(response);
       $('#ig_login').hide();
       swagStr1 = '';
-      for (i in response.data){
+      for (i in response){
 	swagStr1 += "<p>"
-	swagStr1 += response.data[i].full_name;
-	swagStr1 += response.data[i].username;
-	swagStr1 += response.data[i].bio;
+	swagStr1 += response[i].data.full_name;
+	swagStr1 += response[i].data.username;
+	swagStr1 += response[i].data.bio;
 	swagStr1 += "</p>"
   }
       $('#feed').append(swagStr1);
