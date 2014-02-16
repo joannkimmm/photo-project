@@ -4,10 +4,30 @@ if (urlHash){
   var access_token = urlHash.substring(urlHash.indexOf(delimiter)+delimiter.length);
   var feedEl = $('#feed');
   $.ajax({
+    type: 'GET',
+    cache: false,
     url: "hhttps://api.instagram.com/v1/users/self/",
     data: {'access_token': access_token},
     dataType: 'jsonp'
-  })
+    success: function(response){
+      for(i in response.data){
+        $('#feed').html(response.data[i].full_name);
+      }
+    }
+  });//.done(function(response){
+  /*    console.log(response);
+      $('#ig_login').hide();
+      swagStr = '';
+      for (i in response.data){
+  //swagStr += "<a href='";
+  swagStr += response.data[i].full_name;
+  swagStr += "'>";
+  swagStr += "<img src='";
+  swagStr += response.data[i].images.thumbnail.url;
+  swagStr += "'></a>";
+      }
+     // $('#feed').append(swagStr);*/
+   // });
   $.ajax({
     url: "https://api.instagram.com/v1/users/self/media/recent",
     data: {'access_token': access_token},
