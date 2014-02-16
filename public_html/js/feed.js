@@ -36,7 +36,7 @@ if (urlHash){
       }
       $('#feed').append(swagStr);
     });
-    $('#title').append('#feed')
+    $('#feed').append('title.html')
 }
 else{
   //login
