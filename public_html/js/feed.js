@@ -4,30 +4,20 @@ if (urlHash){
   var access_token = urlHash.substring(urlHash.indexOf(delimiter)+delimiter.length);
   var feedEl = $('#feed');
   $.ajax({
-    type: 'GET',
-    cache: false,
     url: "hhttps://api.instagram.com/v1/users/self/",
     data: {'access_token': access_token},
     dataType: 'jsonp'
-    success: function(response){
-      for(i in response.data){
-        $('#feed').html(response.data[i].full_name);
-      }
-    }
-  });//.done(function(response){
-  /*    console.log(response);
+  }).done(function(response){
+      console.log(response);
       $('#ig_login').hide();
-      swagStr = '';
+      swagStr1 = '';
       for (i in response.data){
-  //swagStr += "<a href='";
-  swagStr += response.data[i].full_name;
-  swagStr += "'>";
-  swagStr += "<img src='";
-  swagStr += response.data[i].images.thumbnail.url;
-  swagStr += "'></a>";
-      }
-     // $('#feed').append(swagStr);*/
-   // });
+  swagStr1 += response.data[i].full_name;
+  swagStr1 += response.data[i].username;
+  swagStr1 += response.data[i].bio;
+  }
+      $('#feed').append(swagStr1);
+    });
   $.ajax({
     url: "https://api.instagram.com/v1/users/self/media/recent",
     data: {'access_token': access_token},
