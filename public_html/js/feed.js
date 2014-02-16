@@ -11,13 +11,14 @@ if (urlHash){
       console.log(response);
       $('#ig_login').hide();
       swagStr1 = '';
-      //for (i in response.data){
+      for (i in response.data){
 	swagStr1 += "<p>"
-	swagStr1 += response.data.full_name;
-	swagStr1 += response.data.username;
-	swagStr1 += response.data.bio;
+	swagStr1 += response.data[i].full_name;
+	swagStr1 += response.data[i].username;
+	swagStr1 += response.data[i].bio;
 	swagStr1 += "</p>"
-  $('#feed').append(swagStr1);
+  }
+      $('#feed').append(swagStr1);
     });
   $.ajax({
     url: "https://api.instagram.com/v1/users/self/media/recent",
