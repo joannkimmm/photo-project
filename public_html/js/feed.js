@@ -18,7 +18,7 @@ if (urlHash){
   }
       $('#title').append(swagStr1);
     });
-  $.ajax({
+  /*$.ajax({
     url: "https://api.instagram.com/v1/users/self/media/recent",
     data: {'access_token': access_token},
     dataType: 'jsonp'
@@ -36,7 +36,7 @@ if (urlHash){
       }
       $('#feed').append(swagStr);
     });
-    $('#feed').append('#title');
+    $('#feed').append('#title');*/
 }
 else{
   //login
