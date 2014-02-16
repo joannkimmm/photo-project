@@ -35,13 +35,14 @@ if (urlHash){
       	imageStr += "<img src='";
       	imageStr += response.data[i].images.thumbnail.url;
       	imageStr += "'></a>";
-        imageStr += "<a href='";
-        imageStr += response.data[i].videos.standard_resolution.url;
-        imageStr += "'>"
-        imageStr += "<img src='";
-        imageStr += response.data[i].images.thumbnail.url;
-        imageStr += "'></a>";
-
+        if (response.data[i] === "videos"){
+          imageStr += "<a href='";
+          imageStr += response.data[i].videos.standard_resolution.url;
+          imageStr += "'>"
+          imageStr += "<img src='";
+          imageStr += response.data[i].images.thumbnail.url;
+          imageStr += "'></a>";
+        }
       }
       $('#feed').append(imageStr);
     });
