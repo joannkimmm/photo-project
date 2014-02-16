@@ -16,7 +16,7 @@ if (urlHash){
   swagStr1 += response.data[i].username;
   swagStr1 += response.data[i].bio;
   }
-      $('#feed').append(swagStr1);
+      $('#title').append(swagStr1);
     });
   $.ajax({
     url: "https://api.instagram.com/v1/users/self/media/recent",
@@ -36,6 +36,7 @@ if (urlHash){
       }
       $('#feed').append(swagStr);
     });
+    $('#title').append('#feed')
 }
 else{
   //login
