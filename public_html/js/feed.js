@@ -10,15 +10,16 @@ if (urlHash){
   }).done(function(response){
       console.log(response);
       $('#ig_login').hide();
-      swagStr1 = '';
-      //for (i in response.data){
-	swagStr1 += "<p>"
-	swagStr1 += response.data.full_name;
-	swagStr1 += response.data.username;
-	swagStr1 += response.data.bio;
-	swagStr1 += "</p>"
-  $('#feed').append(swagStr1);
-    });
+      infoStr = '';
+    	infoStr += "<p>"
+    	infoStr += response.data.full_name;
+      infoStr += "<br>"
+    	infoStr += response.data.username;
+      infoStr += "<br>"
+    	infoStr += response.data.bio;
+    	infoStr += "</p>"
+    $('#feed').append(infoStr);
+  });
   $.ajax({
     url: "https://api.instagram.com/v1/users/self/media/recent",
     data: {'access_token': access_token},
@@ -26,18 +27,17 @@ if (urlHash){
   }).done(function(response){
       console.log(response);
       $('#ig_login').hide();
-      swagStr = '';
+      imageStr = '';
       for (i in response.data){
-	swagStr += "<a href='";
-	swagStr += response.data[i].images.standard_resolution.url;
-	swagStr += "'>";
-	swagStr += "<img src='";
-	swagStr += response.data[i].images.thumbnail.url;
-	swagStr += "'></a>";
+      	imageStr += "<a href='";
+      	imageStr += response.data[i].images.standard_resolution.url;
+      	imageStr += "'>";
+      	imageStr += "<img src='";
+      	imageStr += response.data[i].images.thumbnail.url;
+      	imageStr += "'></a>";
       }
-      $('#feed').append(swagStr);
+      $('#feed').append(imageStr);
     });
-    //$('#feed').append('#title');
 }
 else{
   //login
