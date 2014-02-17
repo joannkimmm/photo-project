@@ -5,6 +5,10 @@
 	float: left;
 }
 
+#feed p{
+	font-size: 14px;
+}
+
 #feed {
 	width: 1000px;
 	overflow: hidden;
