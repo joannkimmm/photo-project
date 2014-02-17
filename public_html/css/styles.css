@@ -1,1 +1,19 @@
-.feed 
+#feed a{
+	display: block;
+	padding-top: 5px;
+	width: 200px;
+	float: left;
+}
+
+#feed {
+	width: 1000px;
+	overflow: hidden;
+	zoom: 1;
+	max-width: 95%;
+	margin-top: 20px;
+	margin-right: auto;
+}
+
+div{
+	display: block;
+}
