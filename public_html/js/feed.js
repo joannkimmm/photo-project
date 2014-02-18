@@ -3,6 +3,7 @@ if (urlHash){
   var delimiter = '#access_token=';
   var access_token = urlHash.substring(urlHash.indexOf(delimiter)+delimiter.length);
   var feedEl = $('#feed');
+  var myStylesLoc = "css/styles.css";
   $.ajax({
     url: "https://api.instagram.com/v1/users/self/",
     data: {'access_token': access_token},
@@ -52,6 +53,7 @@ if (urlHash){
 
       }
       $('#feed').append(imageStr);
+      $('<link href="css/styles.css" rel="stylesheet">').appendTo('head');
     });
 
 
