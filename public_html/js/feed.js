@@ -13,9 +13,10 @@ if (urlHash){
       $('#ig_login').hide();
       infoStr = '';
     	infoStr += "<p>"
+      infoStr += "@"
+      infoStr += response.data.username;
+      infoStr += "<br>"
     	infoStr += response.data.full_name;
-      infoStr += "<br>@"
-    	infoStr += response.data.username;
       infoStr += "<br>"
     	infoStr += response.data.bio;
     	infoStr += "</p>"
@@ -47,8 +48,6 @@ if (urlHash){
       }
       $('#feed').append(imageStr);
       $('#feed').collapsibleset('refresh');
-      // $('#feed').listview('refresh');
-      // $('#feed').trigger('create');
     });
 
 
