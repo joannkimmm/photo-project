@@ -18,6 +18,7 @@ if (urlHash){
       infoStr += "<br>"
     	infoStr += response.data.bio;
     	infoStr += "</p>"
+    $('#feed').html(response);
     $('#feed').append(infoStr);
   });
   $.ajax({
