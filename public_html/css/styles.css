@@ -1,15 +1,15 @@
-#feed a{
+.feed1 a{
 	display: block;
 	padding-top: 5px;
 	width: 200px;
 	float: left;
 }
 
-#feed p{
+.feed1 p{
 	font-size: 14px;
 }
 
-#feed {
+.feed1 {
 	width: 1000px;
 	overflow: hidden;
 	zoom: 1;
