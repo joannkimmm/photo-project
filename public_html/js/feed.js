@@ -45,8 +45,8 @@ if (urlHash){
         //   imageStr += "'></a>";
         }
       }
-      $('#feed').append(imageStr);
-      $('#feed').trigger('create');
+      $('#feed').append(imageStr).trigger("create");
+      // $('#feed').trigger('create');
     });
 
 
