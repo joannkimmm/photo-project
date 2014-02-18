@@ -18,6 +18,10 @@
 	margin-right: auto;
 }
 
-div{
-	display: block;
+#test p{
+	font-size:21px;
 }
+
+/*div{
+	display: block;
+}*/
