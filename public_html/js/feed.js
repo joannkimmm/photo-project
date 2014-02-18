@@ -46,9 +46,9 @@ if (urlHash){
         }
       }
       $('#feed').append(imageStr);
-      $('#feed').collapsibleset('refresh');
+      //$('#feed').collapsibleset('refresh');
       // $('#feed').listview('refresh');
-      // $('#feed').trigger('create');
+       $('#feed').trigger('create');
     });
 
 
