@@ -11,6 +11,13 @@ body{
 	float: left;
 }
 
+#feed img{
+	max-width: 100%;
+	width: 190px;
+	height: 190px;
+	zoom: 1;
+}
+
 #feed p{
 	font-size: 20px;
 }
