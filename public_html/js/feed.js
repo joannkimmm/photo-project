@@ -43,6 +43,7 @@ if (urlHash){
           imageStr += response.data[i].images.thumbnail.url;
           imageStr += "'></a>";
         }
+          $('#feed').html(response);
           // $('#feed a').css({
           //   display: block;
           //   padding-top: 5px;
