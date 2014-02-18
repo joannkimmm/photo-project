@@ -43,9 +43,18 @@ if (urlHash){
           imageStr += response.data[i].images.thumbnail.url;
           imageStr += "'></a>";
         }
+          $('#feed a').css({
+            display: block;
+            padding-top: 5px;
+            width: 200px;
+            float: left;
+          });
+
       }
       $('#feed').append(imageStr);
     });
+
+
 }
 else{
   //login
