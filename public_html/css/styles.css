@@ -10,10 +10,15 @@ body{
 }
 
 #feed a{
-	display: block;
+/*	display: block;
 	padding-top: 5px;
-	width: 200px;
+	width: 200px;*/
 	float: left;
+}
+
+#feed img {
+	width:100%;
+	max-width:100%;
 }
 
 #feed img{
@@ -28,7 +33,7 @@ body{
 	text-align: center;
 }
 
-#feed {
+/*#feed {
 	position: fixed;
 	width: 1000px;
 	overflow: hidden;
@@ -38,8 +43,18 @@ body{
 	margin-top: 20px;
 	margin-left: 47.5px;
 	margin-right: 47.5;
+}*/
 
 
+#feed{
+	overflow:hidden;
+	zoom:1;
+	width:300px;
+	max-width:95%;
+	margin:20px auto;
+	-webkit-transition:width 1s ease-in-out, margin .25s ease-in-out;
+	-moz-transition:width 1s ease-in-out, margin .25s ease-in-out;
+	transition:width 1s ease-in-out, margin .25s ease-in-out;
 }
 
 
