@@ -13,7 +13,7 @@ body{
 	display: block;
 	padding: 5px;
 	width: 200px;
-	float: left;
+	float: auto;
 }
 
 #feed img{
