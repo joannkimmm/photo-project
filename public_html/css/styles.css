@@ -34,7 +34,7 @@ body{
 }
 
 #feed {
-	position: fixed;
+	position: absolute;
 	width: 1000px;
 	overflow: hidden;
 	zoom: 1;
