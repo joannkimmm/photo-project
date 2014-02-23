@@ -16,10 +16,10 @@ body{
 	float: left;
 }
 
-#feed img {
+/*#feed img {
 	width:100%;
 	max-width:100%;
-}
+}*/
 
 #feed img{
 	max-width: 100%;
@@ -56,8 +56,6 @@ body{
 	-moz-transition:width 1s ease-in-out, margin .25s ease-in-out;
 	transition:width 1s ease-in-out, margin .25s ease-in-out;
 }*/
-
-
 
 /*div{
 	display: block;
