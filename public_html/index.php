@@ -1,4 +1,4 @@
-<!doctype html>
+<!-- <!doctype html> -->
 
 <html>
 <head>
@@ -17,21 +17,22 @@
 </head>
 <body>
   <div class="container center-button">
-    <form class="form-inline" role="form">
+    <form name="form1" method="post" action="checklogin.php" class="form-inline" role="form">
       <div class="form-group">
-        <label class="sr-only" for="exampleInputEmail2">Email address</label>
-        <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Enter username">
+        <label class="sr-only" for="myusername">Email address</label>
+        <input type="text" name="myusername" class="form-control" id="myusername" placeholder="Enter username">
       </div>
       <div class="form-group">
-        <label class="sr-only" for="exampleInputPassword2">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password">
+        <label class="sr-only" for="mypassword">Password</label>
+        <input type="password" name="mypassword" class="form-control" id="mypassword" placeholder="Password">
       </div>
       <div class="checkbox">
         <label>
           <input type="checkbox"> Remember me
         </label>
       </div>
-      <a href="authorize.html"><button type="submit" class="btn btn-default">Sign in</a></button>
+      <a href="authorize.html"><button type="submit" name="Submit" value="Login" class="btn btn-default">Login</a></button>
+      <a href="createAccount.html"><button type="submit" class="btn btn-default">Sign up</a></button>
     </form>
 
     <script></script>
