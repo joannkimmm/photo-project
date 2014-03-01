@@ -5,6 +5,10 @@ body{
 	font-family: Times;
 }
 
+.container {
+	text-align: center;
+}
+
 .center-button{
 	margin-top: 70px;
 	text-align: center;
@@ -37,13 +41,13 @@ body{
 	max-width: 95%;
 	margin-bottom: 20px;
 	margin-top: 20px;
-	margin-left: 47.5px;
-	margin-right: 47.5;
+/*	margin-left: 47.5px;
+	margin-right: 47.5;*/
 	vertical-align: middle;
 }
 
 .inlineblock {
 	display: inline-block;
 	zoom:1;
-	display*: inline;
-}
+/*	display*: inline;
+*/}
