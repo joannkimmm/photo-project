@@ -42,6 +42,8 @@ body{
 	vertical-align: middle;
 }
 
-/*div{
-	display: block;
-}*/
+.inlineblock {
+	display: inline-block;
+	zoom:1;
+	display*: inline;
+}
